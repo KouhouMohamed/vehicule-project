@@ -1,24 +1,25 @@
 package events
 
+import lombok.Getter
 import java.util.*
 
 abstract class BaseEvent<T>(
-        open val id : T,
-        open val dateEvent : Date
+        @Getter open val id : T,
+        @Getter open val dateEvent : Date
 )
 
 data class RadarCreatedEvent(
         override val id : String,
-        val vitesse : Int,
-        val latitude : Double,
-        val longitude : Double,
+        @Getter val vitesse : Int,
+        @Getter val latitude : Double,
+        @Getter val longitude : Double,
         override val dateEvent : Date
 ):BaseEvent<String>(id, dateEvent);
 
 data class RadarUpdatedEvent(
         override val id : String,
-        val newVitesse : Int,
-        val newLatitude : Double,
-        val newLongitude : Double,
+        @Getter val newVitesse : Int,
+        @Getter val newLatitude : Double,
+        @Getter val newLongitude : Double,
         override val dateEvent : Date
 ):BaseEvent<String>(id, dateEvent);
