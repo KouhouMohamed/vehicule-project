@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="immatricule-command-microservice" />
+        <module name="infraction-microservice" />
+        <module name="infraction-command-microservice" />
+        <module name="immatriculation-microservice" />
+        <module name="infraction-query-microservice" />
+        <module name="immatricule-query-microservice" />
+      </profile>
+      <profile name="Annotation profile for vihecules-project" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.16/lombok-1.18.16.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.4.2.Final/mapstruct-processor-1.4.2.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
+        </processorPath>
+        <module name="core-api-microservice" />
+        <module name="radar-query-microservice" />
+        <module name="radar-command-microservice" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="core-api-microservice" options="-parameters" />
+      <module name="immatricule-command-microservice" options="-parameters" />
+      <module name="immatricule-query-microservice" options="-parameters" />
+      <module name="infraction-command-microservice" options="-parameters" />
+      <module name="infraction-query-microservice" options="-parameters" />
+      <module name="radar-command-microservice" options="-parameters" />
+      <module name="radar-microservice" options="-parameters" />
+      <module name="radar-query-microservice" options="-parameters" />
+      <module name="vehicules-project" options="" />
+    </option>
+  </component>
+</project>
